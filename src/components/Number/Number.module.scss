@@ -1,0 +1,18 @@
+.number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+
+    &__numberRadius {
+        position: relative;
+        height: 50%;
+
+        &>p {
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3rem;
+        }
+    }
+}
