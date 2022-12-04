@@ -5,21 +5,55 @@ import React from 'react';
 
 function App() {
 
-  const clockSettings = {
-    backgroundColor: 'lime',
-    numbersColor: 'red',
-    numbersShadowColor: 'white',
-    border: false,
-    handsColor: 'blue'
-  }
+  const clocksSettings = [
+    // {
+    //   backgroundColor: 'transparent',
+    //   numbersColor: 'white',
+    //   numbersShadowColor: 'black',
+    //   border: false,
+    //   handsColor: 'blue'
+    // }
+    {
+      backgroundColor: 'lime',
+      numbersColor: 'red',
+      numbersShadowColor: 'white',
+      border: false,
+      handsColor: 'blue'
+    }
+    // {
+    //   backgroundColor: 'lime',
+    //   numbersColor: 'red',
+    //   numbersShadowColor: 'white',
+    //   border: false,
+    //   handsColor: 'blue'
+    // },
+    // {
+    //   backgroundColor: 'lime',
+    //   numbersColor: 'red',
+    //   numbersShadowColor: 'white',
+    //   border: false,
+    //   handsColor: 'blue'
+    // },
+    // {
+    //   backgroundColor: 'lime',
+    //   numbersColor: 'red',
+    //   numbersShadowColor: 'white',
+    //   border: false,
+    //   handsColor: 'blue'
+    // }
+  ]
+
+  const clocks = clocksSettings.map((item, index) => {
+    return (
+      <div className='clock' key={index}>
+        <Clock clockSettings={item} />
+      </div>
+    )
+  })
 
   return (
     <div className='app'>
-      <Clock clockSettings={clockSettings} />
-      <Clock clockSettings={clockSettings} />
-      <Clock clockSettings={clockSettings} />
-      <Clock clockSettings={clockSettings} />
-      <Clock clockSettings={clockSettings} />
+      {clocks}
     </div>
   )
 }

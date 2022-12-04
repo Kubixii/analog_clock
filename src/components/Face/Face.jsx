@@ -1,7 +1,6 @@
 import HandOfAClock from '../HandOfAClock/HandOfAClock'
 import Number from '../Number/Number'
 import React from 'react'
-import StoreProvider from '../store/StoreProvider'
 import bemCssModules from 'bem-css-modules'
 import { default as faceStyles } from './Face.module.scss'
 
