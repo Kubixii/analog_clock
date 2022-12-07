@@ -6,41 +6,41 @@ import React from 'react';
 function App() {
 
   const clocksSettings = [
-    // {
-    //   backgroundColor: 'transparent',
-    //   numbersColor: 'white',
-    //   numbersShadowColor: 'black',
-    //   border: false,
-    //   handsColor: 'blue'
-    // }
+    {
+      backgroundColor: 'transparent',
+      numbersColor: 'white',
+      numbersShadowColor: 'black',
+      border: false,
+      handsColor: 'blue',
+      showNumbers: true
+    },
+    {
+      backgroundColor: 'yellow',
+      numbersColor: 'black',
+      numbersShadowColor: 'white',
+      border: true,
+      borderColor: 'green',
+      handsColor: 'blue',
+      showNumbers: true
+    },
     {
       backgroundColor: 'lime',
-      numbersColor: 'red',
-      numbersShadowColor: 'white',
       border: false,
-      handsColor: 'blue'
+      handsColor: 'blue',
+      showNumbers: false
+    },
+    {
+      backgroundColor: 'transparent',
+      border: true,
+      handsColor: 'blue',
+      showNumbers: false
+    },
+    {
+      backgroundColor: 'transparent',
+      border: false,
+      handsColor: 'blue',
+      showNumbers: false
     }
-    // {
-    //   backgroundColor: 'lime',
-    //   numbersColor: 'red',
-    //   numbersShadowColor: 'white',
-    //   border: false,
-    //   handsColor: 'blue'
-    // },
-    // {
-    //   backgroundColor: 'lime',
-    //   numbersColor: 'red',
-    //   numbersShadowColor: 'white',
-    //   border: false,
-    //   handsColor: 'blue'
-    // },
-    // {
-    //   backgroundColor: 'lime',
-    //   numbersColor: 'red',
-    //   numbersShadowColor: 'white',
-    //   border: false,
-    //   handsColor: 'blue'
-    // }
   ]
 
   const clocks = clocksSettings.map((item, index) => {
@@ -53,7 +53,9 @@ function App() {
 
   return (
     <div className='app'>
-      {clocks}
+      <div className='clocksWrapper'>
+        {clocks}
+      </div>
     </div>
   )
 }

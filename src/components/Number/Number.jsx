@@ -13,12 +13,13 @@ const Number = ({ number }) => {
         transformOrigin: 'bottom'
     }
 
-    const { clockSettings: { numbersColor, numbersShadow, numbersShadowColor } } = useContext(StoreContext);
+    const { clockSettings: { numbersColor, numbersShadow, numbersShadowColor }, numbersFontSize } = useContext(StoreContext);
 
     const settings = {
         transform: `rotate(-${number * 30}deg)`,
         color: numbersColor,
-        textShadow: !numbersShadow ? null : `0px 0px 10px ${numbersShadowColor}`
+        textShadow: !numbersShadow ? null : `0px 0px 10px ${numbersShadowColor}`,
+        fontSize: `${numbersFontSize}rem`
     }
 
     return (
