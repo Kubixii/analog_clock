@@ -14,12 +14,17 @@ Settings are presented below:
 **indicatorType** - determinates the type of time indicators (numbers, lines, none)
 
 **numbersColor** - determinates color of numbers
+
 **numbersShadow (boolean)** - determinates if the numbers have a shadow
+
 **numbersShadowColor** - determinates the color of the shadow
 
 **lineColor** - determinates color of the lines
+
 **lineThicness** - determinates how thics the lines are
+
 **lineShadow (boolean)** - determinates if the lines have a shadow
+
 **lineShadowColor** - determinates the color of the shadow
 
 **handsColor** - determinates the color of hands of a clock
