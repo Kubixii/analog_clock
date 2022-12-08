@@ -36,7 +36,6 @@ const StoreProvider = ({ children, settings }) => {
     const updateAngles = () => {
         const data = new Date();
         const timeArray = data.toLocaleString().split(',')[1].slice(1,).split(":");
-        console.log(timeArray);
         const secondsInAHalfDay = 12 * 60 * 60;
         const secondsInAnHour = 60 * 60;
         const secondsInAminute = 60
