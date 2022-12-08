@@ -12,7 +12,7 @@ function App() {
       numbersShadowColor: 'black',
       border: false,
       handsColor: 'blue',
-      showNumbers: true
+      indicatorType: 'numbers',
     },
     {
       backgroundColor: 'yellow',
@@ -21,26 +21,29 @@ function App() {
       border: true,
       borderColor: 'green',
       handsColor: 'blue',
-      showNumbers: true
+      indicatorType: 'numbers',
     },
     {
       backgroundColor: 'lime',
       border: false,
       handsColor: 'blue',
-      showNumbers: false
+      indicatorType: 'none',
     },
     {
       backgroundColor: 'transparent',
       border: true,
       handsColor: 'blue',
-      showNumbers: false
+      lineColor: 'black',
+      lineThicness: '2px',
+      indicatorType: 'lines',
     },
     {
       backgroundColor: 'transparent',
       border: false,
       handsColor: 'blue',
-      showNumbers: false
-    }
+      indicatorType: 'lines',
+    },
+    {}
   ]
 
   const clocks = clocksSettings.map((item, index) => {

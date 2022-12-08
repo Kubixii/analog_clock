@@ -14,8 +14,12 @@ const defaultSettings = {
     borderColor: 'black',
     numbersColor: 'white',
     numbersShadow: true,
-    showNumbers: true,
     numbersShadowColor: 'black',
+    lineColor: 'black',
+    lineThicness: '2px',
+    lineShadow: true,
+    lineShadowColor: 'black',
+    indicatorType: 'numbers',
     handsColor: 'black'
 }
 

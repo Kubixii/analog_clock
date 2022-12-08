@@ -1,0 +1,18 @@
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    display: flex;
+    justify-content: center;
+
+    &__lineRadius {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 50%;
+        width: 10%;
+    }
+}
