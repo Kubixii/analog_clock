@@ -9,6 +9,7 @@ Settings are presented below:
 **backgroundColor** - background color of the clock face
 
 **border (boolean)** - determinates if edge is visible
+
 **borderColor** - determinates color of the edge
 
 **indicatorType** - determinates the type of time indicators (numbers, lines, none)
