@@ -36,10 +36,11 @@ const StoreProvider = ({ children, settings }) => {
     const updateAngles = () => {
         const data = new Date();
         const timeArray = data.toLocaleString().split(',')[1].slice(1,).split(":");
+        console.log(timeArray);
         const secondsInAHalfDay = 12 * 60 * 60;
         const secondsInAnHour = 60 * 60;
         const secondsInAminute = 60
-        const currentSecondsHour = parseInt(timeArray[0]) * 24 * 60 + parseInt(timeArray[1]) * 60 + parseInt(timeArray[2]);
+        const currentSecondsHour = parseInt(timeArray[0]) * 24 * 60 + parseInt(timeArray[1]) * 60 + parseInt(timeArray[2]) + 60 * 60;
         const currentSecondsMinute = parseInt(timeArray[1]) * 60 + parseInt(timeArray[2]);
         const currentSeconds = parseInt(timeArray[2]);
 
