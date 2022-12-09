@@ -34,22 +34,16 @@ const StoreProvider = ({ children, settings }) => {
     const clockSettings = { ...defaultSettings, ...settings, }
 
     const updateAngles = () => {
-        const data = new Date();
-        const timeArray = data.toLocaleString().split(',')[1].slice(1,).split(":");
-        const secondsInAHalfDay = 12 * 60 * 60;
-        const secondsInAnHour = 60 * 60;
-        const secondsInAminute = 60
-        const currentSecondsHour = parseInt(timeArray[0]) * 24 * 60 + parseInt(timeArray[1]) * 60 + parseInt(timeArray[2]) + 60 * 60;
-        const currentSecondsMinute = parseInt(timeArray[1]) * 60 + parseInt(timeArray[2]);
-        const currentSeconds = parseInt(timeArray[2]);
+        const time = new Date();
 
-        const hourPercent = (currentSecondsHour / secondsInAHalfDay).toPrecision(3)
-        const minutesPercent = (currentSecondsMinute / secondsInAnHour).toPrecision(3)
-        const secondsPercent = (currentSeconds / secondsInAminute).toPrecision(3)
+        const secondsDegrees = (time.getSeconds() / 60) * 360;
+        const minutesDegrees = (time.getMinutes() / 60) * 360;
+        const hoursDegrees = ((time.getHours() % 12) / 12) * 360;
+        const hourHandDegrees = hoursDegrees + (minutesDegrees / 12);
 
-        setSecondsAngle(Math.ceil(360 * secondsPercent));
-        setMinutesAngle(Math.ceil(360 * minutesPercent))
-        sethoursAngle(Math.ceil(360 * hourPercent))
+        setSecondsAngle(secondsDegrees)
+        setMinutesAngle(minutesDegrees)
+        sethoursAngle(hourHandDegrees)
     }
 
     useEffect(() => {
